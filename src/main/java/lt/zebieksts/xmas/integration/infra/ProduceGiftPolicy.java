@@ -1,4 +1,4 @@
-package lt.zebieksts.xmas.common.infra;
+package lt.zebieksts.xmas.integration.infra;
 
 import lt.zebieksts.xmas.common.model.DomainEventPublisher;
 import lt.zebieksts.xmas.evaluation.model.RequestApproved;
