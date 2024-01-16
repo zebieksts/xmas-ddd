@@ -13,7 +13,7 @@ public class HandleLetterUseCase {
   private LetterService letterService;
 
   @EventListener
-  public void handle(LetterReceived letterReceived) {
-    letterService.handleLetter(letterReceived.name(), letterReceived.address(), letterReceived.request());
+  public void handleLetterReceived(LetterReceived letterReceived) {
+    letterService.storeLetter(letterReceived.name(), letterReceived.address(), letterReceived.request());
   }
 }

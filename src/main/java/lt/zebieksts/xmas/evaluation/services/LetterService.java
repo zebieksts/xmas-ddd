@@ -21,7 +21,7 @@ public class LetterService {
   private ChildRepository childInfoRepository;
   private DomainEventPublisher eventPublisher;
 
-  public void handleLetter(Name name, Address address, String request) {
+  public void storeLetter(Name name, Address address, String request) {
     Child child = childInfoRepository.find(name, address)
         .orElseThrow(() -> new ChildNotFoundException());
     Letter letter = letterRepository.save(new Letter(UUID.randomUUID(), child.id(), request));
